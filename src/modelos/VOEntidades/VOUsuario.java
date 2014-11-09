@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package modelos.DAOEntidades;
+package modelos.VOEntidades;
 
 /**
  *
  * @author Juan José Cánovas Bustamante
  * @author Rafael Iván Linares Molina
  */
-public class DAOUsuario {
+public class VOUsuario {
     private int id_usuario;
     private int id_rol_app;
     private String usuario;
