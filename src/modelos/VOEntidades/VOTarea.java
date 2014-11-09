@@ -12,20 +12,15 @@ import java.util.Date;
  * @author Juan José Cánovas Bustamante
  * @author Rafael Iván Linares Molina
  */
-public class VOSubtarea {
-    private int id_subtarea;
+public class VOTarea {
     private int id_tarea;
     private int id_proyecto;
     private Date fecha_inicio;
-    private String nombre_subtarea;
-    private String descripcion_subtarea;
+    private String nombre_tarea;
+    private String descripcion_tarea;
     private int porcentaje_realizado;
     private int duracion_estimada;
     private int id_estado;
-
-    public int getId_subtarea() {
-        return id_subtarea;
-    }
 
     public int getId_tarea() {
         return id_tarea;
@@ -39,12 +34,12 @@ public class VOSubtarea {
         return fecha_inicio;
     }
 
-    public String getNombre_subtarea() {
-        return nombre_subtarea;
+    public String getNombre_tarea() {
+        return nombre_tarea;
     }
 
-    public String getDescripcion_subtarea() {
-        return descripcion_subtarea;
+    public String getDescripcion_tarea() {
+        return descripcion_tarea;
     }
 
     public int getPorcentaje_realizado() {
@@ -59,10 +54,6 @@ public class VOSubtarea {
         return id_estado;
     }
 
-    public void setId_subtarea(int id_subtarea) {
-        this.id_subtarea = id_subtarea;
-    }
-
     public void setId_tarea(int id_tarea) {
         this.id_tarea = id_tarea;
     }
@@ -75,12 +66,12 @@ public class VOSubtarea {
         this.fecha_inicio = fecha_inicio;
     }
 
-    public void setNombre_subtarea(String nombre_subtarea) {
-        this.nombre_subtarea = nombre_subtarea;
+    public void setNombre_tarea(String nombre_tarea) {
+        this.nombre_tarea = nombre_tarea;
     }
 
-    public void setDescripcion_subtarea(String descripcion_subtarea) {
-        this.descripcion_subtarea = descripcion_subtarea;
+    public void setDescripcion_tarea(String descripcion_tarea) {
+        this.descripcion_tarea = descripcion_tarea;
     }
 
     public void setPorcentaje_realizado(int porcentaje_realizado) {
