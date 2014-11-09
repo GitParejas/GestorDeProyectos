@@ -6,9 +6,7 @@
 package modelos.DAOEntidades;
 
 import conexión.Conexion;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import modelos.VOEntidades.VOUsuario;

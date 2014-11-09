@@ -1,8 +1,8 @@
 package conexión;
 
 import java.sql.Connection;
-import com.mysql.jdbc.Driver;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Conexion {
 
@@ -22,7 +22,7 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
             this.con = DriverManager.getConnection(url, user, pass);
 
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Fallo de conexión");
         }
     }
