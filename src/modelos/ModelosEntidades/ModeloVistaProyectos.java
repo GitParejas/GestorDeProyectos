@@ -19,6 +19,7 @@ import modelos.VOEntidades.VODatosPersonales;
 import modelos.VOEntidades.VOProyecto;
 import modelos.VOEntidades.VOUsuario;
 import modelos.VOEntidades.VOUsuarioTrabaja;
+import vistas.VistaProyectos;
 
 /**
  *
@@ -45,11 +46,20 @@ public class ModeloVistaProyectos extends AbstractTableModel {
     public ModeloVistaProyectos() {
 
         this.listaProyectos = new ArrayList<>();
+        //Almacena los datos de Datos personales
         vodp = daoDatosPersonales.getAllDatosPersonales();
+
+        //Almacena los datos de los clientes
         voc = daoCliente.getAllClientes();
+
+        //Almacena los datos de los proyectos
         vop = daoProyecto.getAllProyectos();
+
+        //Almacena los datos de los usuarios;
         vou = daoUsuario.getAllUsuarios();
-        vout = daoUsuarioTrabaja.getUsuarioTrabaja(SesionActual.getId_usuario());
+
+        //Obtiene DONDE trabaja un usuario
+        vout = daoUsuarioTrabaja.getUsuarioTrabajaById(SesionActual.getId_usuario());
 
         if (SesionActual.getId_rol_app() == 1) {
             for (int i = 0; i < vop.size(); i++) {
@@ -78,33 +88,33 @@ public class ModeloVistaProyectos extends AbstractTableModel {
                 this.listaProyectos.add(fila);
             }
         } else {
-
+            
+            vop = daoProyecto.getProyectoNoAdmin(SesionActual.getId_usuario());
+            
             for (int i = 0; i < vop.size(); i++) {
                 Object fila[] = new Object[7];
-
-                for (int x = 0; x < vout.size(); x++) {
-                    if (vout.get(x).getId_usuario() == vou.get(i).getId_usuario()) {
-                        fila[0] = vop.get(i).getId_proyecto();
-                        for (int j = 0; j < vou.size(); j++) {
-                            if (vop.get(i).getId_jefe_proyecto() == vou.get(j).getId_usuario()) {
-                                for (int k = 0; k < vodp.size(); k++) {
-                                    if (vou.get(j).getId_datos() == vodp.get(k).getId_datos()) {
-                                        fila[1] = vodp.get(k).getNombre();
-                                    }
-                                }
+                fila[0] = vout.get(i).getId_proyecto();
+                
+                for (int j = 0; j < vou.size(); j++) {
+                    if (vop.get(i).getId_jefe_proyecto() == vou.get(j).getId_usuario()) {
+                        for (int k = 0; k < vodp.size(); k++) {
+                            if (vou.get(j).getId_datos() == vodp.get(k).getId_datos()) {
+                                fila[1] = vodp.get(k).getNombre();
                             }
                         }
-                        for (int j = 0; j < voc.size(); j++) {
-                            if (voc.get(j).getId_cliente() == vop.get(i).getId_cliente()) {
-                                fila[2] = voc.get(j).getNombre();
-                            }
-                        }
-                        fila[3] = vop.get(i).getNombre_proyecto();
-                        fila[4] = vop.get(i).getFecha_inicio();
-                        fila[5] = vop.get(i).getFecha_final_pactada();
-                        fila[6] = vop.get(i).getFecha_final_calculada();
                     }
                 }
+                
+                for (int j = 0; j < voc.size(); j++) {
+                    if (voc.get(j).getId_cliente() == vop.get(i).getId_cliente()) {
+                        fila[2] = voc.get(j).getNombre();
+                    }
+                }
+                fila[3] = vop.get(i).getNombre_proyecto();
+                fila[4] = vop.get(i).getFecha_inicio();
+                fila[5] = vop.get(i).getFecha_final_pactada();
+                fila[6] = vop.get(i).getFecha_final_calculada();              
+                
                 this.listaProyectos.add(fila);
             }
         }

@@ -46,15 +46,14 @@ public class DAOUsuarioTrabaja {
         return usuariosTrabajando;
     }
 
-    public ArrayList<VOUsuarioTrabaja> getUsuarioTrabaja(int id_usuario) {
+    public ArrayList<VOUsuarioTrabaja> getUsuarioTrabajaById(int id_usuario) {
         Conexion con = new Conexion();
 
         ArrayList<VOUsuarioTrabaja> usuariosTrabajando = new ArrayList<>();
 
         try {
-
             Statement consulta = con.getConexion().createStatement();
-            ResultSet rs = consulta.executeQuery("select p.*  "
+            ResultSet rs = consulta.executeQuery("select p.id_proyecto, ut.id_usuario, ut.id_rol  "
                 + "from proyecto p, usuario_trabaja ut, usuario u  "
                 + "where u.id_usuario = ut.id_usuario AND p.id_proyecto = ut.id_proyecto "
                 + "and u.id_usuario = \""+id_usuario+"\";");

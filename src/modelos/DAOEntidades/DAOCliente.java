@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package modelos.DAOEntidades;
 
 import conexión.Conexion;
@@ -14,11 +13,12 @@ import java.util.ArrayList;
 import modelos.VOEntidades.VOCliente;
 
 /**
- * 
+ *
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
 public class DAOCliente {
-     public ArrayList<VOCliente> getAllClientes() {
+
+    public ArrayList<VOCliente> getAllClientes() {
         Conexion con = new Conexion();
 
         ArrayList<VOCliente> clientes = new ArrayList<>();
@@ -44,5 +44,31 @@ public class DAOCliente {
             System.out.println("Error al hacer la consulta de Cliente");
         }
         return clientes;
+    }
+
+    public VOCliente getClienteById(int id_cliente) {
+        Conexion con = new Conexion();
+        VOCliente cliente = null;
+
+        try {
+
+            Statement consulta = con.getConexion().createStatement();
+            ResultSet rs = consulta.executeQuery("Select * from cliente;");
+            cliente = new VOCliente();
+
+            if (rs.next()) {
+
+                cliente.setId_cliente(rs.getInt("id_cliente"));
+                cliente.setNombre(rs.getString("nombre"));
+
+            }
+            rs.close();
+            consulta.close();
+            con.desconectar();
+        } catch (SQLException error) {
+            error.printStackTrace();
+            System.out.println("Error al hacer la consulta de Cliente");
+        }
+        return cliente;
     }
 }
