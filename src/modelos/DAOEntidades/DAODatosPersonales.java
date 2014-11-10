@@ -53,10 +53,9 @@ public class DAODatosPersonales {
             consulta.close();
             con.desconectar();            
         } catch (SQLException error) {
-            System.out.println("Error al hacer la consulta");
+            System.out.println("Error al hacer la consulta Datos Personales");
         }
 
         return datos;
     }
-
 }

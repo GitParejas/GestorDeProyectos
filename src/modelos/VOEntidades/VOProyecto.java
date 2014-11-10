@@ -18,9 +18,9 @@ public class VOProyecto {
     private int id_cliente;
     private String nombre_proyecto;
     private String descripcion;
-    private Date fecha_inicio;
-    private Date fecha_final_pactada;
-    private Date fecha_final_calculada;
+    private String fecha_inicio;
+    private String fecha_final_pactada;
+    private String fecha_final_calculada;
     private int id_estado;
 
     public int getId_proyecto() {
@@ -43,15 +43,15 @@ public class VOProyecto {
         return descripcion;
     }
 
-    public Date getFecha_inicio() {
+    public String getFecha_inicio() {
         return fecha_inicio;
     }
 
-    public Date getFecha_final_pactada() {
+    public String getFecha_final_pactada() {
         return fecha_final_pactada;
     }
 
-    public Date getFecha_final_calculada() {
+    public String getFecha_final_calculada() {
         return fecha_final_calculada;
     }
 
@@ -79,15 +79,15 @@ public class VOProyecto {
         this.descripcion = descripcion;
     }
 
-    public void setFecha_inicio(Date fecha_inicio) {
+    public void setFecha_inicio(String fecha_inicio) {
         this.fecha_inicio = fecha_inicio;
     }
 
-    public void setFecha_final_pactada(Date fecha_final_pactada) {
+    public void setFecha_final_pactada(String fecha_final_pactada) {
         this.fecha_final_pactada = fecha_final_pactada;
     }
 
-    public void setFecha_final_calculada(Date fecha_final_calculada) {
+    public void setFecha_final_calculada(String fecha_final_calculada) {
         this.fecha_final_calculada = fecha_final_calculada;
     }
 
