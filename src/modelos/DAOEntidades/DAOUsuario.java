@@ -15,6 +15,10 @@ import modelos.VOEntidades.VOUsuario;
  */
 public class DAOUsuario {
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<VOUsuario> getAllUsuarios() {
         Conexion con = new Conexion();
 
@@ -45,6 +49,12 @@ public class DAOUsuario {
         return usuarios;
     }
 
+    /**
+     *
+     * @param usuario
+     * @param password
+     * @return
+     */
     public static VOUsuario getUsuario(String usuario, String password) {
         Conexion con = new Conexion();
         String consulta = "Select * from usuario where contraseña = \"" + password + "\" and usuario = \"" + usuario + "\" ";
@@ -73,6 +83,11 @@ public class DAOUsuario {
         return user;
     }
     
+    /**
+     *
+     * @param id_usuario
+     * @return
+     */
     public static VOUsuario getUsuarioById(int id_usuario) {
         Conexion con = new Conexion();
         String consulta = "Select * from usuario where id_usuario = \"" + id_usuario + "\" ";

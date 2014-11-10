@@ -38,6 +38,9 @@ public class ModeloVistaProyectos extends AbstractTableModel {
     ArrayList<VOUsuario> vou = new ArrayList<>();
     ArrayList<VOUsuarioTrabaja> vout = new ArrayList<>();
 
+    /**
+     *
+     */
     public ModeloVistaProyectos() {
 
         this.listaProyectos = new ArrayList<>();
@@ -115,37 +118,73 @@ public class ModeloVistaProyectos extends AbstractTableModel {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getRowCount() {
         return this.listaProyectos.size();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getColumnCount() {
         return this.cabeceraTablaProyectos.length;
     }
 
+    /**
+     *
+     * @param rowIndex
+     * @param columnIndex
+     * @return
+     */
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object fila[] = this.listaProyectos.get(rowIndex);
         return fila[columnIndex];
     }
 
+    /**
+     *
+     * @param columnIndex
+     * @return
+     */
     @Override
     public String getColumnName(int columnIndex) {
         return this.cabeceraTablaProyectos[columnIndex];
     }
 
+    /**
+     *
+     * @param columnIndex
+     * @return
+     */
     @Override
     public Class getColumnClass(int columnIndex) {
         return this.columnTypes[columnIndex];
     }
 
+    /**
+     *
+     * @param row
+     * @param col
+     * @return
+     */
     @Override
     public boolean isCellEditable(int row, int col) {
         return false;
     }
 
+    /**
+     *
+     * @param value
+     * @param row
+     * @param col
+     */
     @Override
     public void setValueAt(Object value, int row, int col) {
         this.listaProyectos.get(row)[col] = value;

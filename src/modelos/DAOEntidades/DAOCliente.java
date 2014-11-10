@@ -15,6 +15,10 @@ import modelos.VOEntidades.VOCliente;
  */
 public class DAOCliente {
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<VOCliente> getAllClientes() {
         Conexion con = new Conexion();
 
@@ -43,6 +47,11 @@ public class DAOCliente {
         return clientes;
     }
 
+    /**
+     *
+     * @param id_cliente
+     * @return
+     */
     public VOCliente getClienteById(int id_cliente) {
         Conexion con = new Conexion();
         VOCliente cliente = null;

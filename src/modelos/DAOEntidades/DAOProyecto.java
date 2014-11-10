@@ -14,6 +14,10 @@ import modelos.VOEntidades.VOProyecto;
  */
 public class DAOProyecto {
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<VOProyecto> getAllProyectos() {
         Conexion con = new Conexion();
 
@@ -56,6 +60,11 @@ public class DAOProyecto {
         return proyectos;
     }
 
+    /**
+     *
+     * @param id_proyecto
+     * @return
+     */
     public VOProyecto getProyecto(int id_proyecto) {
         Conexion con = new Conexion();
         VOProyecto proyecto = null;
@@ -97,6 +106,11 @@ public class DAOProyecto {
         return proyecto;
     }
     
+    /**
+     *
+     * @param id_usuario
+     * @return
+     */
     public ArrayList<VOProyecto> getProyectoNoAdmin(int id_usuario) {
         Conexion con = new Conexion();
         VOProyecto proyecto = null;

@@ -94,10 +94,18 @@ public class Conexion {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getPass() {
         return pass;
     }
 
+    /**
+     *
+     * @param pass
+     */
     public void setPass(String pass) {
         this.pass = pass;
     }

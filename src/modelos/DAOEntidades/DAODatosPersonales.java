@@ -15,6 +15,10 @@ import modelos.VOEntidades.VODatosPersonales;
  */
 public class DAODatosPersonales {
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<VODatosPersonales> getAllDatosPersonales() {
         Conexion con = new Conexion();
         ArrayList<VODatosPersonales> datos = new ArrayList<>();

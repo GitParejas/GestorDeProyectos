@@ -14,6 +14,10 @@ import modelos.VOEntidades.VOUsuarioTrabaja;
  */
 public class DAOUsuarioTrabaja {
 
+    /**
+     *
+     * @return
+     */
     public ArrayList<VOUsuarioTrabaja> getAllUsuariosTrabajando() {
         Conexion con = new Conexion();
 
@@ -42,6 +46,11 @@ public class DAOUsuarioTrabaja {
         return usuariosTrabajando;
     }
 
+    /**
+     *
+     * @param id_usuario
+     * @return
+     */
     public ArrayList<VOUsuarioTrabaja> getUsuarioTrabajaById(int id_usuario) {
         Conexion con = new Conexion();
 

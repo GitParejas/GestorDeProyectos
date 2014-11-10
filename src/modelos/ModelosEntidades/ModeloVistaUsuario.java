@@ -25,6 +25,9 @@ public class ModeloVistaUsuario extends AbstractTableModel {
     ArrayList<VOUsuario> vou = new ArrayList<>();
     ArrayList<VODatosPersonales> vodp = new ArrayList<>();
 
+    /**
+     *
+     */
     public ModeloVistaUsuario() {
         this.listaUsuarios = new ArrayList<>();
         vou = daoUsuario.getAllUsuarios();
@@ -51,37 +54,73 @@ public class ModeloVistaUsuario extends AbstractTableModel {
 
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getRowCount() {
         return this.listaUsuarios.size();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public int getColumnCount() {
         return this.cabeceraTablaUsuarios.length;
     }
 
+    /**
+     *
+     * @param rowIndex
+     * @param columnIndex
+     * @return
+     */
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object fila[] = this.listaUsuarios.get(rowIndex);
         return fila[columnIndex];
     }
 
+    /**
+     *
+     * @param columnIndex
+     * @return
+     */
     @Override
     public String getColumnName(int columnIndex) {
         return this.cabeceraTablaUsuarios[columnIndex];
     }
 
+    /**
+     *
+     * @param columnIndex
+     * @return
+     */
     @Override
     public Class getColumnClass(int columnIndex) {
         return this.columnTypes[columnIndex];
     }
 
+    /**
+     *
+     * @param row
+     * @param col
+     * @return
+     */
     @Override
     public boolean isCellEditable(int row, int col) {
         return false;
     }
 
+    /**
+     *
+     * @param value
+     * @param row
+     * @param col
+     */
     @Override
     public void setValueAt(Object value, int row, int col) {
         this.listaUsuarios.get(row)[col] = value;
