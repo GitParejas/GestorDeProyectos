@@ -13,7 +13,7 @@ import modelos.VOEntidades.VOUsuario;
  * @author Juan José Cánovas Bustamante
  * @author Rafael Iván Linares Molina
  */
-public class ModeloVistaUsuario extends AbstractTableModel {
+public class ModeloListaUsuarios extends AbstractTableModel {
 
     DAOUsuario daoUsuario = new DAOUsuario();
     DAODatosPersonales daoDatosPersonales = new DAODatosPersonales();
@@ -28,7 +28,7 @@ public class ModeloVistaUsuario extends AbstractTableModel {
     /**
      *
      */
-    public ModeloVistaUsuario() {
+    public ModeloListaUsuarios() {
         this.listaUsuarios = new ArrayList<>();
         vou = daoUsuario.getAllUsuarios();
         vodp = daoDatosPersonales.getAllDatosPersonales();

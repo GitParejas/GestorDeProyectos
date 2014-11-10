@@ -1,7 +1,7 @@
 
 package vistas;
 
-import modelos.ModelosEntidades.ModeloVistaUsuario;
+import modelos.ModelosEntidades.ModeloListaUsuarios;
 
 /**
  *
@@ -18,7 +18,7 @@ public class VistaListaUsuarios extends javax.swing.JFrame {
         setTitle("Listado de Usuarios");
         setLocationRelativeTo(null);
         setResizable(false);
-        jTable1.setModel(new ModeloVistaUsuario());
+        jTable1.setModel(new ModeloListaUsuarios());
     }
 
     /**
