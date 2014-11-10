@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package modelos.DAOEntidades;
 
 import conexión.Conexion;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -16,7 +10,8 @@ import modelos.VOEntidades.VODatosPersonales;
 
 /**
  *
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
 public class DAODatosPersonales {
 

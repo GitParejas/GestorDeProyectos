@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelos.ModelosEntidades;
 
 import java.util.ArrayList;
@@ -21,7 +17,8 @@ import modelos.VOEntidades.VOUsuarioTrabaja;
 
 /**
  *
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
 public class ModeloVistaProyectos extends AbstractTableModel {
 

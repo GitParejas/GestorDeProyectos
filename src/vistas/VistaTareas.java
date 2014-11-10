@@ -7,7 +7,8 @@ package vistas;
 
 /**
  *
- * @author Khanox
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
 public class VistaTareas extends javax.swing.JFrame {
 
@@ -16,6 +17,9 @@ public class VistaTareas extends javax.swing.JFrame {
      */
     public VistaTareas() {
         initComponents();
+        setTitle("Tareas");
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**

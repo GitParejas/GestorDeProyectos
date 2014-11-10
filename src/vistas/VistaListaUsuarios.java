@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vistas;
 
-import modelos.ModelosEntidades.Usuario;
+import modelos.ModelosEntidades.ModeloVistaUsuario;
 
 /**
  *
- * @author Khanox
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
 public class VistaListaUsuarios extends javax.swing.JFrame {
 
@@ -18,7 +15,10 @@ public class VistaListaUsuarios extends javax.swing.JFrame {
      */
     public VistaListaUsuarios() {
         initComponents();
-        jTable1.setModel(new Usuario());
+        setTitle("Listado de Usuarios");
+        setLocationRelativeTo(null);
+        setResizable(false);
+        jTable1.setModel(new ModeloVistaUsuario());
     }
 
     /**

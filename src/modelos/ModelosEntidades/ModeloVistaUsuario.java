@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelos.ModelosEntidades;
 
 import java.util.ArrayList;
@@ -14,9 +10,10 @@ import modelos.VOEntidades.VOUsuario;
 
 /**
  *
- * @author Sammy Guergachi <sguergachi at gmail.com>
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
-public class Usuario extends AbstractTableModel {
+public class ModeloVistaUsuario extends AbstractTableModel {
 
     DAOUsuario daoUsuario = new DAOUsuario();
     DAODatosPersonales daoDatosPersonales = new DAODatosPersonales();
@@ -28,7 +25,7 @@ public class Usuario extends AbstractTableModel {
     ArrayList<VOUsuario> vou = new ArrayList<>();
     ArrayList<VODatosPersonales> vodp = new ArrayList<>();
 
-    public Usuario() {
+    public ModeloVistaUsuario() {
         this.listaUsuarios = new ArrayList<>();
         vou = daoUsuario.getAllUsuarios();
         vodp = daoDatosPersonales.getAllDatosPersonales();

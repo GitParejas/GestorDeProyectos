@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package vistas;
 
 import java.awt.event.ActionEvent;
@@ -12,7 +8,8 @@ import modelos.SesionActual;
 
 /**
  *
- * @author Khanox
+ * @author Juan José Cánovas Bustamante
+ * @author Rafael Iván Linares Molina
  */
 public class VistaProyectos extends javax.swing.JFrame {
 
@@ -31,11 +28,33 @@ public class VistaProyectos extends javax.swing.JFrame {
             jButtonGestionCuentas.setEnabled(true);
             jButtonGestionPersonal.setEnabled(true);
             
+            jButtonVerProyecto.addActionListener(new ActionListener(){
+
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
+                    obj.setVisible(true);
+                    dispose();
+                }
+                
+            });
+            
         } else {
             jButtonCrearProyecto.setEnabled(false);
             jButtonEliminarProyecto.setEnabled(false);
             jButtonGestionCuentas.setEnabled(false);
             jButtonGestionPersonal.setEnabled(false);
+            
+            jButtonVerProyecto.addActionListener(new ActionListener(){
+
+                @Override
+                public void actionPerformed(ActionEvent ae) {
+                    VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
+                    obj.setVisible(true);
+                    dispose();
+                }
+                
+            });
         }
 
         jTableProyectos.setModel(new ModeloVistaProyectos());
