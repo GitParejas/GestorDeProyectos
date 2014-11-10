@@ -7,8 +7,7 @@ package vistas;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaTareas extends javax.swing.JFrame {
 
@@ -17,9 +16,6 @@ public class VistaTareas extends javax.swing.JFrame {
      */
     public VistaTareas() {
         initComponents();
-        setTitle("Tareas");
-        setLocationRelativeTo(null);
-        setResizable(false);
     }
 
     /**
@@ -67,13 +63,13 @@ public class VistaTareas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTableTareas);
 
-        jButtonVerTareaEnDetalle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Magnifier2.png"))); // NOI18N
+        jButtonVerTareaEnDetalle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Search.png"))); // NOI18N
         jButtonVerTareaEnDetalle.setToolTipText("Ver tarea en detalle");
 
-        jButtonEliminarTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        jButtonEliminarTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Delete.png"))); // NOI18N
         jButtonEliminarTarea.setToolTipText("Eliminar tarea");
 
-        jButtonAñadirTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/añadir.png"))); // NOI18N
+        jButtonAñadirTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add.png"))); // NOI18N
         jButtonAñadirTarea.setToolTipText("Añadir tarea");
 
         jLabelProyecto.setText("Proyecto:");
@@ -135,13 +131,13 @@ public class VistaTareas extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTableSubtareas);
 
-        jButtonVerSubtareaEnDetalle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Magnifier2.png"))); // NOI18N
+        jButtonVerSubtareaEnDetalle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Search.png"))); // NOI18N
         jButtonVerSubtareaEnDetalle.setToolTipText("Ver subtarea en detalle");
 
-        jButtonEliminarSubtarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        jButtonEliminarSubtarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Delete.png"))); // NOI18N
         jButtonEliminarSubtarea.setToolTipText("Eliminar subtarea");
 
-        jButtonAñadirSubtarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/añadir.png"))); // NOI18N
+        jButtonAñadirSubtarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add.png"))); // NOI18N
         jButtonAñadirSubtarea.setToolTipText("Añadir subtarea");
 
         jLabelNombreTarea.setText("Tarea:");
@@ -190,7 +186,7 @@ public class VistaTareas extends javax.swing.JFrame {
                 .addGap(176, 176, 176))
         );
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back.png"))); // NOI18N
         jButtonVolver.setToolTipText("Volver atrás");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

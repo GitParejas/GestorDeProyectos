@@ -1,10 +1,13 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaHitos extends javax.swing.JFrame {
 
@@ -13,9 +16,6 @@ public class VistaHitos extends javax.swing.JFrame {
      */
     public VistaHitos() {
         initComponents();
-        setTitle("Listado de Reuniones");
-        setLocationRelativeTo(null);
-        setResizable(false);
     }
 
     /**
@@ -50,7 +50,7 @@ public class VistaHitos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back.png"))); // NOI18N
         jButtonVolver.setToolTipText("Volver atrás");
 
         jPanelHitos.setBorder(javax.swing.BorderFactory.createTitledBorder("Hitos del proyecto"));
@@ -68,7 +68,7 @@ public class VistaHitos extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTableHitos);
 
-        jButtonEliminarHito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        jButtonEliminarHito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Delete.png"))); // NOI18N
         jButtonEliminarHito.setToolTipText("Eliminar hito");
 
         jLabelNombreProyecto.setText("Proyecto:");
@@ -131,7 +131,7 @@ public class VistaHitos extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButtonNo);
         jRadioButtonNo.setText("No");
 
-        jButtonAñadirHito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/añadir.png"))); // NOI18N
+        jButtonAñadirHito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add.png"))); // NOI18N
         jButtonAñadirHito.setToolTipText("Añadir hito");
 
         jEditorPaneDescripcion.setBorder(javax.swing.BorderFactory.createTitledBorder("Descripción"));

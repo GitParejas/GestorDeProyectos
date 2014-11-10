@@ -1,8 +1,13 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 import modelos.DAOEntidades.DAOUsuario;
 import modelos.SesionActual;
@@ -10,8 +15,7 @@ import modelos.VOEntidades.VOUsuario;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaLogin extends javax.swing.JFrame {
 
@@ -20,7 +24,7 @@ public class VistaLogin extends javax.swing.JFrame {
      */
     public VistaLogin() {
         initComponents();
-        setTitle("Login del sistema");
+        setTitle("Login!");
         setLocationRelativeTo(null);
         setResizable(false);
 
@@ -91,8 +95,6 @@ public class VistaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelNombreSoftware = new javax.swing.JPanel();
-        jLabelNombreSoftware = new javax.swing.JLabel();
         jPanelLogin = new javax.swing.JPanel();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelPassword = new javax.swing.JLabel();
@@ -100,12 +102,11 @@ public class VistaLogin extends javax.swing.JFrame {
         jButtonOk = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
         jTextFieldUsuario = new javax.swing.JTextField();
+        jPanelNombreSoftware = new javax.swing.JPanel();
+        jLabelNombreSoftware = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Inicio de sesión");
-
-        jLabelNombreSoftware.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabelNombreSoftware.setText("SOFTWARE DE GESTIÓN DE PROYECTOS");
 
         jPanelLogin.setBorder(javax.swing.BorderFactory.createTitledBorder("Inicio de sesión"));
 
@@ -122,19 +123,20 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanelLoginLayout.setHorizontalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLoginLayout.createSequentialGroup()
-                .addContainerGap(39, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelPassword)
-                    .addComponent(jLabelUsuario))
-                .addGap(18, 18, 18)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanelLoginLayout.createSequentialGroup()
                         .addComponent(jButtonOk)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonSalir))
-                    .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                        .addComponent(jTextFieldUsuario)))
+                    .addGroup(jPanelLoginLayout.createSequentialGroup()
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelPassword)
+                            .addComponent(jLabelUsuario))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(jTextFieldUsuario))))
                 .addGap(63, 63, 63))
         );
         jPanelLoginLayout.setVerticalGroup(
@@ -152,8 +154,11 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonOk)
                     .addComponent(jButtonSalir))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jLabelNombreSoftware.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabelNombreSoftware.setText("SOFTWARE DE GESTIÓN DE PROYECTOS");
 
         javax.swing.GroupLayout jPanelNombreSoftwareLayout = new javax.swing.GroupLayout(jPanelNombreSoftware);
         jPanelNombreSoftware.setLayout(jPanelNombreSoftwareLayout);
@@ -163,31 +168,32 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addComponent(jLabelNombreSoftware)
                 .addGap(45, 45, 45))
-            .addGroup(jPanelNombreSoftwareLayout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
         );
         jPanelNombreSoftwareLayout.setVerticalGroup(
             jPanelNombreSoftwareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelNombreSoftwareLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabelNombreSoftware)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
             .addComponent(jPanelNombreSoftware, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelNombreSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100))
         );
 
         pack();

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 import java.awt.event.ActionEvent;
@@ -8,8 +12,7 @@ import modelos.SesionActual;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaProyectos extends javax.swing.JFrame {
 
@@ -28,33 +31,11 @@ public class VistaProyectos extends javax.swing.JFrame {
             jButtonGestionCuentas.setEnabled(true);
             jButtonGestionPersonal.setEnabled(true);
             
-            jButtonVerProyecto.addActionListener(new ActionListener(){
-
-                @Override
-                public void actionPerformed(ActionEvent ae) {
-                    VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
-                    obj.setVisible(true);
-                    dispose();
-                }
-                
-            });
-            
         } else {
             jButtonCrearProyecto.setEnabled(false);
             jButtonEliminarProyecto.setEnabled(false);
             jButtonGestionCuentas.setEnabled(false);
             jButtonGestionPersonal.setEnabled(false);
-            
-            jButtonVerProyecto.addActionListener(new ActionListener(){
-
-                @Override
-                public void actionPerformed(ActionEvent ae) {
-                    VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
-                    obj.setVisible(true);
-                    dispose();
-                }
-                
-            });
         }
 
         jTableProyectos.setModel(new ModeloVistaProyectos());
@@ -148,7 +129,7 @@ public class VistaProyectos extends javax.swing.JFrame {
         jPanelOpcionesProyectoLayout.setHorizontalGroup(
             jPanelOpcionesProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOpcionesProyectoLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanelOpcionesProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelOpcionesProyectoLayout.createSequentialGroup()
                         .addComponent(jButtonVerProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,12 +139,12 @@ public class VistaProyectos extends javax.swing.JFrame {
                         .addComponent(jButtonCrearProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonEliminarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(46, 46, 46))
+                .addGap(30, 30, 30))
         );
         jPanelOpcionesProyectoLayout.setVerticalGroup(
             jPanelOpcionesProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOpcionesProyectoLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
                 .addGroup(jPanelOpcionesProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonCrearProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonEliminarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -171,11 +152,11 @@ public class VistaProyectos extends javax.swing.JFrame {
                 .addGroup(jPanelOpcionesProyectoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonVerProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonVerHitosProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(11, 11, 11))
         );
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
-        jButtonVolver.setToolTipText("Volver atrás");
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Exit.png"))); // NOI18N
+        jButtonVolver.setToolTipText("Cerrar sesión");
 
         jPanelOpcionesPersonal.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones de personal"));
 
@@ -188,20 +169,20 @@ public class VistaProyectos extends javax.swing.JFrame {
         jPanelOpcionesPersonalLayout.setHorizontalGroup(
             jPanelOpcionesPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOpcionesPersonalLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addGroup(jPanelOpcionesPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonGestionPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonGestionCuentas, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 19, Short.MAX_VALUE))
+                    .addComponent(jButtonGestionCuentas, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGestionPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10))
         );
         jPanelOpcionesPersonalLayout.setVerticalGroup(
             jPanelOpcionesPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOpcionesPersonalLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(10, 10, 10)
                 .addComponent(jButtonGestionPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonGestionCuentas, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                .addGap(24, 24, 24))
+                .addComponent(jButtonGestionCuentas, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addGap(10, 10, 10))
         );
 
         javax.swing.GroupLayout jPanelProyectosLayout = new javax.swing.GroupLayout(jPanelProyectos);
@@ -216,8 +197,9 @@ public class VistaProyectos extends javax.swing.JFrame {
                         .addComponent(jPanelOpcionesProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanelOpcionesPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonVolver, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)))
+                        .addGap(32, 32, 32)
+                        .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 23, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelProyectosLayout.setVerticalGroup(
@@ -226,15 +208,15 @@ public class VistaProyectos extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanelProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelProyectosLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelProyectosLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanelProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanelOpcionesPersonal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanelOpcionesProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(80, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanelProyectosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanelOpcionesPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanelOpcionesProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelProyectosLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(jButtonVolver)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -244,7 +226,7 @@ public class VistaProyectos extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jPanelProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

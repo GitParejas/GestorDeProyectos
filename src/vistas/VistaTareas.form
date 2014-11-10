@@ -130,7 +130,7 @@
         <Component class="javax.swing.JButton" name="jButtonVerTareaEnDetalle">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/Magnifier2.png"/>
+              <Image iconType="3" name="/imagenes/Search.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ver tarea en detalle"/>
           </Properties>
@@ -138,7 +138,7 @@
         <Component class="javax.swing.JButton" name="jButtonEliminarTarea">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/eliminar.png"/>
+              <Image iconType="3" name="/imagenes/Delete.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Eliminar tarea"/>
           </Properties>
@@ -146,7 +146,7 @@
         <Component class="javax.swing.JButton" name="jButtonA&#xf1;adirTarea">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/a&#xf1;adir.png"/>
+              <Image iconType="3" name="/imagenes/Add.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="A&#xf1;adir tarea"/>
           </Properties>
@@ -252,7 +252,7 @@
         <Component class="javax.swing.JButton" name="jButtonVerSubtareaEnDetalle">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/Magnifier2.png"/>
+              <Image iconType="3" name="/imagenes/Search.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Ver subtarea en detalle"/>
           </Properties>
@@ -260,7 +260,7 @@
         <Component class="javax.swing.JButton" name="jButtonEliminarSubtarea">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/eliminar.png"/>
+              <Image iconType="3" name="/imagenes/Delete.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Eliminar subtarea"/>
           </Properties>
@@ -268,7 +268,7 @@
         <Component class="javax.swing.JButton" name="jButtonA&#xf1;adirSubtarea">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/a&#xf1;adir.png"/>
+              <Image iconType="3" name="/imagenes/Add.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="A&#xf1;adir subtarea"/>
           </Properties>
@@ -313,7 +313,7 @@
         <Component class="javax.swing.JButton" name="jButtonVolver">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/imagenes/volver.png"/>
+              <Image iconType="3" name="/imagenes/Back.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Volver atr&#xe1;s"/>
           </Properties>

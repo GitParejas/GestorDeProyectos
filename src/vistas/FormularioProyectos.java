@@ -1,10 +1,13 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class FormularioProyectos extends javax.swing.JFrame {
 
@@ -13,9 +16,6 @@ public class FormularioProyectos extends javax.swing.JFrame {
      */
     public FormularioProyectos() {
         initComponents();
-        setTitle("Crear Proyecto");
-        setLocationRelativeTo(null);
-        setResizable(false);
     }
 
     /**
@@ -64,10 +64,10 @@ public class FormularioProyectos extends javax.swing.JFrame {
 
         jComboBoxJefesProyecto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Apellido1 Apellido2, Nombre" }));
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back.png"))); // NOI18N
         jButtonVolver.setToolTipText("Volver atrás");
 
-        jButtonCrearProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/añadir.png"))); // NOI18N
+        jButtonCrearProyecto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add.png"))); // NOI18N
         jButtonCrearProyecto.setToolTipText("Crear proyecto");
 
         jLabelDesarrolladores.setText("Desarrolladores que participan en el proyecto:");

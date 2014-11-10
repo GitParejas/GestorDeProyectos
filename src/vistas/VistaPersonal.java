@@ -1,11 +1,14 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaPersonal extends javax.swing.JFrame {
 
@@ -14,9 +17,6 @@ public class VistaPersonal extends javax.swing.JFrame {
      */
     public VistaPersonal() {
         initComponents();
-        setTitle("Vista de Personal");
-        setLocationRelativeTo(null);
-        setResizable(false);
     }
 
     /**
@@ -49,14 +49,12 @@ public class VistaPersonal extends javax.swing.JFrame {
         jTextFieldNSS = new javax.swing.JTextField();
         jTextFieldTitulacion = new javax.swing.JTextField();
         jLabelFechaNacimiento = new javax.swing.JLabel();
-        jLabelSueldo = new javax.swing.JLabel();
+        jLabelHorasJornadaDiaria = new javax.swing.JLabel();
         jButtonAñadirRegistro = new javax.swing.JButton();
-        jLabelRol = new javax.swing.JLabel();
-        jComboBoxRol = new javax.swing.JComboBox();
         jTextFieldDNI = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
-        jFormattedTextField3 = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldFechaNac = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldFechaAltaSis = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldHorasJornadaDiaria = new javax.swing.JFormattedTextField();
         jButtonEliminarRegistro = new javax.swing.JButton();
         jButtonVolver = new javax.swing.JButton();
         jToggleButtonModificarRegistro = new javax.swing.JToggleButton();
@@ -94,24 +92,20 @@ public class VistaPersonal extends javax.swing.JFrame {
 
         jLabelTitulacion.setText("Titulación:");
 
-        jLabelFechaAltaSistema.setText("Fecha Antigüedad:");
+        jLabelFechaAltaSistema.setText("Fecha alta sistema:");
 
         jLabelFechaNacimiento.setText("Fecha Nacimiento:");
 
-        jLabelSueldo.setText("Sueldo:");
+        jLabelHorasJornadaDiaria.setText("Horas jornada diaria:");
 
-        jButtonAñadirRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/añadir.png"))); // NOI18N
+        jButtonAñadirRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Add.png"))); // NOI18N
         jButtonAñadirRegistro.setToolTipText("Añadir registro");
 
-        jLabelRol.setText("Rol:");
+        jFormattedTextFieldFechaNac.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yy"))));
 
-        jComboBoxRol.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Jefe de proyecto", "Desarrollador" }));
+        jFormattedTextFieldFechaAltaSis.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yy"))));
 
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yy"))));
-
-        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yy"))));
-
-        jFormattedTextField3.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldHorasJornadaDiaria.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
 
         javax.swing.GroupLayout jPanelFormularioDeAltaLayout = new javax.swing.GroupLayout(jPanelFormularioDeAlta);
         jPanelFormularioDeAlta.setLayout(jPanelFormularioDeAltaLayout);
@@ -128,7 +122,7 @@ public class VistaPersonal extends javax.swing.JFrame {
                         .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
                             .addComponent(jLabelFechaNacimiento)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jFormattedTextFieldFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
                             .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jLabelDNI)
@@ -137,66 +131,61 @@ public class VistaPersonal extends javax.swing.JFrame {
                             .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextFieldDNI, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                                 .addComponent(jTextFieldNombre)))))
-                .addGap(9, 9, 9)
-                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
-                            .addGap(26, 26, 26)
-                            .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelApellido1, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabelNSS, javax.swing.GroupLayout.Alignment.TRAILING)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFormularioDeAltaLayout.createSequentialGroup()
-                            .addGap(27, 27, 27)
-                            .addComponent(jLabelTelefono)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFormularioDeAltaLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabelSueldo)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
-                        .addComponent(jTextFieldApellido1)
-                        .addComponent(jTextFieldNSS))
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelRol, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelApellido2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelEmail, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelFechaAltaSistema, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(12, 12, 12)
+                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
                         .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBoxRol, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonAñadirRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43))
+                            .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelApellido1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabelNSS, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabelTelefono, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldNSS, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
-                        .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(jLabelHorasJornadaDiaria)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFormattedTextFieldHorasJornadaDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
+                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
+                        .addComponent(jLabelFechaAltaSistema)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jFormattedTextFieldFechaAltaSis, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
+                        .addComponent(jLabelApellido2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
+                        .addComponent(jLabelEmail)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonAñadirRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
         jPanelFormularioDeAltaLayout.setVerticalGroup(
             jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFormularioDeAltaLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonAñadirRegistro)
+                    .addGroup(jPanelFormularioDeAltaLayout.createSequentialGroup()
                         .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabelDNI)
                             .addComponent(jTextFieldNSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelNSS)
-                            .addComponent(jLabelRol)
                             .addComponent(jTextFieldDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxRol, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelFechaAltaSistema)
+                            .addComponent(jFormattedTextFieldFechaAltaSis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabelNombre)
                             .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelApellido1)
                             .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabelApellido1)
                                 .addComponent(jTextFieldApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabelApellido2)
                                 .addComponent(jTextFieldApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -207,23 +196,20 @@ public class VistaPersonal extends javax.swing.JFrame {
                             .addComponent(jTextFieldTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelTelefono)
                             .addComponent(jLabelFechaNacimiento)
-                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButtonAñadirRegistro, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jFormattedTextFieldFechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelFormularioDeAltaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldTitulacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelTitulacion)
-                    .addComponent(jLabelSueldo)
-                    .addComponent(jLabelFechaAltaSistema)
-                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(jLabelHorasJornadaDiaria)
+                    .addComponent(jFormattedTextFieldHorasJornadaDiaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(22, 22, 22))
         );
 
-        jButtonEliminarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/eliminar.png"))); // NOI18N
+        jButtonEliminarRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Delete.png"))); // NOI18N
         jButtonEliminarRegistro.setToolTipText("Eliminar registro");
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back.png"))); // NOI18N
         jButtonVolver.setToolTipText("Volver atrás");
         jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,21 +229,24 @@ public class VistaPersonal extends javax.swing.JFrame {
             .addGroup(jPanelGestionPersonalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelGestionPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGestionPersonalLayout.createSequentialGroup()
-                        .addGap(0, 745, Short.MAX_VALUE)
+                    .addGroup(jPanelGestionPersonalLayout.createSequentialGroup()
                         .addGroup(jPanelGestionPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonVolver, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGestionPersonalLayout.createSequentialGroup()
+                                .addGap(0, 756, Short.MAX_VALUE)
                                 .addComponent(jToggleButtonModificarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonEliminarRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(10, 10, 10))))
+                                .addGap(10, 10, 10))
+                            .addGroup(jPanelGestionPersonalLayout.createSequentialGroup()
+                                .addComponent(jComboBoxMostrarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(jPanelGestionPersonalLayout.createSequentialGroup()
-                        .addComponent(jComboBoxMostrarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanelFormularioDeAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addComponent(jPanelFormularioDeAlta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(30, 30, 30)
+                        .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))))
         );
         jPanelGestionPersonalLayout.setVerticalGroup(
             jPanelGestionPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,11 +258,14 @@ public class VistaPersonal extends javax.swing.JFrame {
                     .addComponent(jToggleButtonModificarRegistro)
                     .addComponent(jButtonEliminarRegistro)
                     .addComponent(jComboBoxMostrarPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanelFormularioDeAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(jButtonVolver)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(jPanelGestionPersonalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGestionPersonalLayout.createSequentialGroup()
+                        .addComponent(jPanelFormularioDeAlta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelGestionPersonalLayout.createSequentialGroup()
+                        .addComponent(jButtonVolver)
+                        .addGap(66, 66, 66))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -343,20 +335,18 @@ public class VistaPersonal extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEliminarRegistro;
     private javax.swing.JButton jButtonVolver;
     private javax.swing.JComboBox jComboBoxMostrarPersonal;
-    private javax.swing.JComboBox jComboBoxRol;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
-    private javax.swing.JFormattedTextField jFormattedTextField3;
+    private javax.swing.JFormattedTextField jFormattedTextFieldFechaAltaSis;
+    private javax.swing.JFormattedTextField jFormattedTextFieldFechaNac;
+    private javax.swing.JFormattedTextField jFormattedTextFieldHorasJornadaDiaria;
     private javax.swing.JLabel jLabelApellido1;
     private javax.swing.JLabel jLabelApellido2;
     private javax.swing.JLabel jLabelDNI;
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelFechaAltaSistema;
     private javax.swing.JLabel jLabelFechaNacimiento;
+    private javax.swing.JLabel jLabelHorasJornadaDiaria;
     private javax.swing.JLabel jLabelNSS;
     private javax.swing.JLabel jLabelNombre;
-    private javax.swing.JLabel jLabelRol;
-    private javax.swing.JLabel jLabelSueldo;
     private javax.swing.JLabel jLabelTelefono;
     private javax.swing.JLabel jLabelTitulacion;
     private javax.swing.JPanel jPanelFormularioDeAlta;

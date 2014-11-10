@@ -1,10 +1,13 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package vistas;
 
 /**
  *
- * @author Juan José Cánovas Bustamante
- * @author Rafael Iván Linares Molina
+ * @author Khanox
  */
 public class VistaTareasEnDetalle extends javax.swing.JFrame {
 
@@ -13,9 +16,6 @@ public class VistaTareasEnDetalle extends javax.swing.JFrame {
      */
     public VistaTareasEnDetalle() {
         initComponents();
-        setTitle("Vista en detalle: Tarea");
-        setLocationRelativeTo(null);
-        setResizable(false);
     }
 
     /**
@@ -163,10 +163,10 @@ public class VistaTareasEnDetalle extends javax.swing.JFrame {
 
         jButtonEliminarDeTarea.setText("Eliminar de tarea / subtarea");
 
-        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/volver.png"))); // NOI18N
+        jButtonVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Back.png"))); // NOI18N
         jButtonVolver.setToolTipText("Volver atrás");
 
-        jButtonCrearTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/save-48.png"))); // NOI18N
+        jButtonCrearTarea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Save.png"))); // NOI18N
         jButtonCrearTarea.setToolTipText("Guardar cambios");
 
         javax.swing.GroupLayout jPanelDesarrolladoresAsignadosLayout = new javax.swing.GroupLayout(jPanelDesarrolladoresAsignados);
