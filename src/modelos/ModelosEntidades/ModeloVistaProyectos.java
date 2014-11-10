@@ -6,7 +6,6 @@
 package modelos.ModelosEntidades;
 
 import java.util.ArrayList;
-import java.util.Date;
 import javax.swing.table.AbstractTableModel;
 import modelos.DAOEntidades.DAOCliente;
 import modelos.DAOEntidades.DAODatosPersonales;
@@ -19,7 +18,6 @@ import modelos.VOEntidades.VODatosPersonales;
 import modelos.VOEntidades.VOProyecto;
 import modelos.VOEntidades.VOUsuario;
 import modelos.VOEntidades.VOUsuarioTrabaja;
-import vistas.VistaProyectos;
 
 /**
  *
@@ -118,7 +116,6 @@ public class ModeloVistaProyectos extends AbstractTableModel {
                 this.listaProyectos.add(fila);
             }
         }
-
     }
 
     @Override

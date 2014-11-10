@@ -27,7 +27,7 @@ public class DAOProyecto {
         try {
 
             Statement consulta = con.getConexion().createStatement();
-            ResultSet rs = consulta.executeQuery("Select * from proyecto;");
+            ResultSet rs = consulta.executeQuery("SELECT * FROM proyecto;");
             VOProyecto proyecto;
 
             while (rs.next()) {
@@ -67,7 +67,9 @@ public class DAOProyecto {
         try {
 
             Statement consulta = con.getConexion().createStatement();
-            ResultSet rs = consulta.executeQuery("Select * from proyecto where id_proyecto = \"" + id_proyecto + "\";");
+            ResultSet rs = consulta.executeQuery("SELECT * "
+                + "FROM proyecto "
+                + "WHERE id_proyecto = \"" + id_proyecto + "\";");
             
             if (rs.next()) {
                 proyecto = new VOProyecto();
