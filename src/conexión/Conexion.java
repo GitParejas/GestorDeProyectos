@@ -24,7 +24,7 @@ public class Conexion {
 
             this.url = "jdbc:mysql://localhost/sgbd";
             this.user = "root";
-            this.pass = "reliquias";
+            this.pass = "campus";
 
             Class.forName("com.mysql.jdbc.Driver");
             this.con = DriverManager.getConnection(url, user, pass);

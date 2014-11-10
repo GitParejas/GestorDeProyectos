@@ -214,7 +214,7 @@ public class VistaProyectos extends javax.swing.JFrame {
                             .addComponent(jPanelOpcionesPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanelOpcionesProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelProyectosLayout.createSequentialGroup()
-                        .addGap(53, 53, 53)
+                        .addGap(62, 62, 62)
                         .addComponent(jButtonVolver)))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
