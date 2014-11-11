@@ -61,6 +61,17 @@ public class VistaProyectos extends javax.swing.JFrame {
             }
         });
         
+        jButtonCrearProyecto.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
+        
         jButtonGestionCuentas.addActionListener(new ActionListener() {
 
             @Override
