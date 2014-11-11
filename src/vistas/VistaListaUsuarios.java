@@ -20,18 +20,18 @@ public class VistaListaUsuarios extends javax.swing.JFrame {
      */
     public VistaListaUsuarios() {
         initComponents();
-        
+
         setTitle("Lista de usuarios");
         setLocationRelativeTo(null);
-        setResizable(false); 
-        
+        setResizable(false);
+
         jTable1.setModel(new ModeloListaUsuarios());
-        
+
         jButtonVolver.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
-                
+
                 VistaProyectos obj = new VistaProyectos();
                 obj.setVisible(true);
                 dispose();

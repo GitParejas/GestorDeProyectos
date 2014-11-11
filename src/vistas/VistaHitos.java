@@ -25,17 +25,6 @@ public class VistaHitos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false); 
         
-        if (SesionActual.getId_rol_app() != 1){
-            jTextFieldNombreHito.setEnabled(false);
-            jRadioButtonNo.setEnabled(false);
-            jRadioButtonSi.setEnabled(false);
-            jEditorPaneDescripcion.setEnabled(false);
-            jFormattedTextFieldFechaReunion.setEnabled(false);
-            jButtonAñadirHito.setEnabled(false);
-            jButtonEliminarHito.setEnabled(false);
-            jToggleButtonDesbloquearHito.setEnabled(false);
-        }
-        
         jButtonVolver.addActionListener(new ActionListener() {
 
             @Override
@@ -46,6 +35,18 @@ public class VistaHitos extends javax.swing.JFrame {
                 dispose();
             }
         });
+        
+        if (SesionActual.getId_rol_app() != 1){
+            jTextFieldNombreHito.setEnabled(false);
+            jRadioButtonNo.setEnabled(false);
+            jRadioButtonSi.setEnabled(false);
+            jEditorPaneDescripcion.setEnabled(false);
+            jFormattedTextFieldFechaReunion.setEnabled(false);
+            jButtonAñadirHito.setEnabled(false);
+            jButtonEliminarHito.setEnabled(false);
+            jToggleButtonDesbloquearHito.setEnabled(false);
+        }
+               
     }
 
     /**

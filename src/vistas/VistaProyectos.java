@@ -61,7 +61,7 @@ public class VistaProyectos extends javax.swing.JFrame {
             }
         });
         
-        jButtonCrearProyecto.addActionListener(new ActionListener() {
+        jButtonVerProyecto.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -83,16 +83,6 @@ public class VistaProyectos extends javax.swing.JFrame {
             }
         });
         
-        jButtonGestionPersonal.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                
-                VistaPersonal obj = new VistaPersonal();
-                obj.setVisible(true);
-                dispose();
-            }
-        });
         
         jButtonVerHitosProyecto.addActionListener(new ActionListener() {
 
