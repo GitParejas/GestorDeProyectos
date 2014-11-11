@@ -25,17 +25,12 @@ public class VistaProyectos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false); 
         
-        if (SesionActual.getId_rol_app() == 1) {
-            jButtonCrearProyecto.setEnabled(true);
-            jButtonEliminarProyecto.setEnabled(true);
-            jButtonGestionCuentas.setEnabled(true);
-            jButtonGestionPersonal.setEnabled(true);
-            
-        } else {
+        if (SesionActual.getId_rol_app() != 1) {
             jButtonCrearProyecto.setEnabled(false);
             jButtonEliminarProyecto.setEnabled(false);
             jButtonGestionCuentas.setEnabled(false);
             jButtonGestionPersonal.setEnabled(false);
+            
         }
 
         jTableProyectos.setModel(new ModeloVistaProyectos());
@@ -54,6 +49,51 @@ public class VistaProyectos extends javax.swing.JFrame {
                 dispose();
             }
         });
+        
+        jButtonCrearProyecto.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaProyectoEnDetalle obj = new VistaProyectoEnDetalle();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
+        
+        jButtonGestionCuentas.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaListaUsuarios obj = new VistaListaUsuarios();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
+        
+        jButtonGestionPersonal.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaPersonal obj = new VistaPersonal();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
+        
+        jButtonVerHitosProyecto.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaHitos obj = new VistaHitos();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
+        
     }
 
  

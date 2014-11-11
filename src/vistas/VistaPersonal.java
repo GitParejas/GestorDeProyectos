@@ -5,6 +5,9 @@
  */
 package vistas;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 /**
  *
@@ -17,6 +20,21 @@ public class VistaPersonal extends javax.swing.JFrame {
      */
     public VistaPersonal() {
         initComponents();
+        
+        setTitle("Datos Personales");
+        setLocationRelativeTo(null);
+        setResizable(false); 
+        
+        jButtonVolver.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaProyectos obj = new VistaProyectos();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**

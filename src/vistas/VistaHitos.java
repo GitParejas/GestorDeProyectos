@@ -5,6 +5,10 @@
  */
 package vistas;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import modelos.SesionActual;
+
 /**
  *
  * @author Khanox
@@ -16,6 +20,32 @@ public class VistaHitos extends javax.swing.JFrame {
      */
     public VistaHitos() {
         initComponents();
+        
+        setTitle("Reuniones");
+        setLocationRelativeTo(null);
+        setResizable(false); 
+        
+        if (SesionActual.getId_rol_app() != 1){
+            jTextFieldNombreHito.setEnabled(false);
+            jRadioButtonNo.setEnabled(false);
+            jRadioButtonSi.setEnabled(false);
+            jEditorPaneDescripcion.setEnabled(false);
+            jFormattedTextFieldFechaReunion.setEnabled(false);
+            jButtonAñadirHito.setEnabled(false);
+            jButtonEliminarHito.setEnabled(false);
+            jToggleButtonDesbloquearHito.setEnabled(false);
+        }
+        
+        jButtonVolver.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaProyectos obj = new VistaProyectos();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**

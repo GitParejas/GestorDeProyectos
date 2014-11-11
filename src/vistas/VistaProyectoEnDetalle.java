@@ -5,6 +5,10 @@
  */
 package vistas;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import modelos.SesionActual;
+
 /**
  *
  * @author Khanox
@@ -16,6 +20,35 @@ public class VistaProyectoEnDetalle extends javax.swing.JFrame {
      */
     public VistaProyectoEnDetalle() {
         initComponents();
+        setTitle("Detalles del Proyecto");
+        setLocationRelativeTo(null);
+        setResizable(false); 
+        
+        if (SesionActual.getId_rol_app() != 1){
+            jTextFieldNombreProyecto.setEditable(false);
+            jButtonGuardar.setEnabled(false);
+            jButtonQuitarDelProyecto.setEnabled(false);
+            jEditorPaneDescripcionProyecto.setEditable(false);
+            jComboBoxDesarrolladores.setEnabled(false);
+            jButtonAñadirAlProyecto.setEnabled(false);
+            jFormattedTextFieldFechaFin.setEditable(false);
+            jFormattedTextFieldFechaInicio.setEditable(false);
+            jComboBoxJefesProyecto.setEnabled(false);
+            jRadioButtonVerHitos.setEnabled(false);
+            jRadioButtonVerTareas.setEnabled(false);
+            jButtonConsultar.setEnabled(false);
+        }
+        
+        jButtonVolver.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                
+                VistaProyectos obj = new VistaProyectos();
+                obj.setVisible(true);
+                dispose();
+            }
+        });
     }
 
     /**
